@@ -17,7 +17,7 @@ namespace FairHR.OAuth
             var config = new HttpConfiguration();
             WebApiConfig.Register(config);
             ConfigureOAth(app);
-
+            UnityConfig.RegisterComponents(config); // Use unity as ioc container. Global 
 
             //这一行必须放在ConfigureOAth(app)之后
             app.UseWebApi(config);
